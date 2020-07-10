@@ -28,21 +28,9 @@ import StarIcon from "@material-ui/icons/Star";
 
 import About from "./About";
 import Portfolio from "./Portfolio";
+import Footer from "./Footer";
 
 const drawerWidth = 240;
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://www.linkedin.com/in/cindyledev/">
-        Cindy Le
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -86,10 +74,6 @@ const useStyles = makeStyles((theme) => ({
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
   },
 }));
 
@@ -176,11 +160,7 @@ export default function App() {
           ))}
         </List>
       </Drawer>
-      {/* Footer */}
-      <footer className={classes.footer}>
-        <Copyright />
-      </footer>
-      {/* End footer */}
+      <Footer />
     </React.Fragment>
   );
 }
