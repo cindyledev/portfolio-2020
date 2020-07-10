@@ -27,6 +27,8 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ComputerIcon from "@material-ui/icons/Computer";
 import FolderIcon from "@material-ui/icons/Folder";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
 import PersonIcon from "@material-ui/icons/Person";
@@ -170,7 +172,10 @@ export default function Album() {
               color="textPrimary"
               gutterBottom
             >
-              Album layout
+              CINDY LE
+            </Typography>
+            <Typography variant="h5" align="center" gutterBottom>
+              FULL STACK DEVELOPER • AWS
             </Typography>
             <Typography
               variant="h5"
@@ -178,21 +183,25 @@ export default function Album() {
               color="textSecondary"
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              I'm experienced in wide range of frontend technologies and
+              primarily specialize in JavaScript and React.
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
+                  <IconButton aria-label="linkedin" color="primary">
+                    <LinkedInIcon fontSize="large" />
+                  </IconButton>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
+                  <IconButton aria-label="github" color="primary">
+                    <GitHubIcon fontSize="large" />
+                  </IconButton>
+                </Grid>
+                <Grid item>
+                  <IconButton aria-label="github" color="primary">
+                    <MailIcon fontSize="large" />
+                  </IconButton>
                 </Grid>
               </Grid>
             </div>
