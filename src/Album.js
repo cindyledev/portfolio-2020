@@ -22,11 +22,16 @@ import {
   Typography,
 } from "@material-ui/core";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
+import BuildIcon from "@material-ui/icons/Build";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
+import ComputerIcon from "@material-ui/icons/Computer";
+import FolderIcon from "@material-ui/icons/Folder";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
+import PersonIcon from "@material-ui/icons/Person";
+import SchoolIcon from "@material-ui/icons/School";
+import StarIcon from "@material-ui/icons/Star";
 
 const drawerWidth = 240;
 
@@ -136,7 +141,7 @@ export default function Album() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap className={classes.title}>
-            Persistent drawer
+            Cindy Le
           </Typography>
           <IconButton
             color="inherit"
@@ -247,23 +252,17 @@ export default function Album() {
         </div>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+          {[
+            { name: "About", icon: <PersonIcon /> },
+            { name: "Experience", icon: <ComputerIcon /> },
+            { name: "Education", icon: <SchoolIcon /> },
+            { name: "Skills", icon: <BuildIcon /> },
+            { name: "Portfolio", icon: <FolderIcon /> },
+            { name: "Achievements", icon: <StarIcon /> },
+          ].map((item, index) => (
+            <ListItem button key={item}>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.name} />
             </ListItem>
           ))}
         </List>
