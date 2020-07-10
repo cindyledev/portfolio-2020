@@ -27,7 +27,11 @@ import SchoolIcon from "@material-ui/icons/School";
 import StarIcon from "@material-ui/icons/Star";
 
 import About from "./About";
+import Experience from "./Experience";
+import Education from "./Education";
+import Skills from "./Skills";
 import Portfolio from "./Portfolio";
+import Achievements from "./Achievements";
 import Footer from "./Footer";
 
 const drawerWidth = 240;
@@ -121,9 +125,13 @@ export default function App() {
       >
         <div className={classes.drawerHeader} />
         <About />
+        <Experience />
+        <Education />
+        <Skills />
         <Container className={classes.cardGrid} maxWidth="md">
           <Portfolio />
         </Container>
+        <Achievements />
       </main>
       <Drawer
         className={classes.drawer}
