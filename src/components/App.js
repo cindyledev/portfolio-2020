@@ -27,7 +27,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import SchoolIcon from "@material-ui/icons/School";
 import StarIcon from "@material-ui/icons/Star";
 
-import About from "./About";
+import Hero from "./Hero";
 import Experience from "./Experience";
 import Education from "./Education";
 import Skills from "./Skills";
@@ -152,7 +152,7 @@ export default function App() {
         })}
       >
         <div className={classes.drawerHeader} />
-        <About />
+        <Hero />
         <Container className={classes.cardGrid} maxWidth="md">
           <Portfolio />
         </Container>
