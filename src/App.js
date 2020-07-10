@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { BrowserRouter as Router, Link as RouterLink } from "react-router-dom";
 import clsx from "clsx";
 import {
   AppBar,
@@ -7,7 +9,6 @@ import {
   Drawer,
   Divider,
   IconButton,
-  Link,
   List,
   ListItem,
   ListItemIcon,
@@ -35,6 +36,33 @@ import Achievements from "./Achievements";
 import Footer from "./Footer";
 
 const drawerWidth = 240;
+
+function ListItemLink(props) {
+  const { icon, primary, to } = props;
+
+  const renderLink = React.useMemo(
+    () =>
+      React.forwardRef((itemProps, ref) => (
+        <RouterLink to={to} ref={ref} {...itemProps} />
+      )),
+    [to]
+  );
+
+  return (
+    <li>
+      <ListItem button component={renderLink}>
+        {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+        <ListItemText primary={primary} />
+      </ListItem>
+    </li>
+  );
+}
+
+ListItemLink.propTypes = {
+  icon: PropTypes.element,
+  primary: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
+};
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -95,7 +123,7 @@ export default function App() {
   };
 
   return (
-    <React.Fragment>
+    <Router>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -125,13 +153,9 @@ export default function App() {
       >
         <div className={classes.drawerHeader} />
         <About />
-        <Experience />
-        <Education />
-        <Skills />
         <Container className={classes.cardGrid} maxWidth="md">
           <Portfolio />
         </Container>
-        <Achievements />
       </main>
       <Drawer
         className={classes.drawer}
@@ -154,21 +178,26 @@ export default function App() {
         <Divider />
         <List>
           {[
-            { name: "About", icon: <PersonIcon /> },
-            { name: "Experience", icon: <ComputerIcon /> },
-            { name: "Education", icon: <SchoolIcon /> },
-            { name: "Skills", icon: <BuildIcon /> },
-            { name: "Portfolio", icon: <FolderIcon /> },
-            { name: "Achievements", icon: <StarIcon /> },
+            { name: "About", icon: <PersonIcon />, route: "/" },
+            {
+              name: "Experience",
+              icon: <ComputerIcon />,
+              route: "/experience",
+            },
+            { name: "Education", icon: <SchoolIcon />, route: "/education" },
+            { name: "Skills", icon: <BuildIcon />, route: "/skills" },
+            { name: "Portfolio", icon: <FolderIcon />, route: "portfolio" },
+            { name: "Achievements", icon: <StarIcon />, route: "achievements" },
           ].map((item, index) => (
-            <ListItem button key={item}>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.name} />
-            </ListItem>
+            <ListItemLink
+              to={item.route}
+              primary={item.name}
+              icon={item.icon}
+            />
           ))}
         </List>
       </Drawer>
       <Footer />
-    </React.Fragment>
+    </Router>
   );
 }
