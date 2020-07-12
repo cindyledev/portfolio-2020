@@ -7,6 +7,7 @@ import {
   CardMedia,
   Container,
   Grid,
+  Link,
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -48,9 +49,11 @@ export default function Portfolio() {
                 <Typography>{project.description}</Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" color="primary">
-                  APP
-                </Button>
+                <Link href={project.url} target="_blank" underline="none">
+                  <Button size="small" color="primary">
+                    APP
+                  </Button>
+                </Link>
                 <Button size="small" color="primary">
                   DETAILS
                 </Button>
