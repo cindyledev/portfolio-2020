@@ -31,7 +31,7 @@ export default function Hero() {
           CINDY LE
         </Typography>
         <Typography variant="h5" align="center" gutterBottom>
-          FULL STACK DEVELOPER • AWS
+          FULL STACK DEVELOPER
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" paragraph>
           I'm experienced in wide range of frontend technologies and primarily
@@ -40,17 +40,38 @@ export default function Hero() {
         <div className={classes.heroButtons}>
           <Grid container spacing={2} justify="center">
             <Grid item>
-              <IconButton aria-label="linkedin" color="primary">
+              <IconButton
+                aria-label="https://www.linkedin.com/in/cindyledev/"
+                color="primary"
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/cindyledev/",
+                    "_blank"
+                  )
+                }
+              >
                 <LinkedInIcon fontSize="large" />
               </IconButton>
             </Grid>
             <Grid item>
-              <IconButton aria-label="github" color="primary">
+              <IconButton
+                aria-label="https://github.com/cindyledev/"
+                color="primary"
+                onClick={() =>
+                  window.open("https://github.com/cindyledev/", "_blank")
+                }
+              >
                 <GitHubIcon fontSize="large" />
               </IconButton>
             </Grid>
             <Grid item>
-              <IconButton aria-label="github" color="primary">
+              <IconButton
+                aria-label="mailto:cindyledev@gmail.com"
+                color="primary"
+                onClick={() =>
+                  window.open("mailto:cindyledev@gmail.com", "_blank")
+                }
+              >
                 <MailIcon fontSize="large" />
               </IconButton>
             </Grid>
