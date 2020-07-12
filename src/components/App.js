@@ -153,9 +153,7 @@ export default function App() {
       >
         <div className={classes.drawerHeader} />
         <Hero />
-        <Container className={classes.cardGrid} maxWidth="md">
-          <Portfolio />
-        </Container>
+        <Portfolio />
       </main>
       <Drawer
         className={classes.drawer}

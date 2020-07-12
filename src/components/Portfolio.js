@@ -5,10 +5,13 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Container,
   Grid,
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+
+import projects from "../projects.js";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -24,41 +27,38 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const cards = [1, 2, 3];
-
 export default function Portfolio() {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={4}>
-      {cards.map((card) => (
-        <Grid item key={card} xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
-            <CardMedia
-              className={classes.cardMedia}
-              image="https://source.unsplash.com/random"
-              title="Image title"
-            />
-            <CardContent className={classes.cardContent}>
-              <Typography gutterBottom variant="h5" component="h2">
-                Heading
-              </Typography>
-              <Typography>
-                This is a media card. You can use this section to describe the
-                content.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                View
-              </Button>
-              <Button size="small" color="primary">
-                Edit
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
+    <Container className={classes.cardGrid} maxWidth="md">
+      <Grid container spacing={4}>
+        {projects.map((project) => (
+          <Grid item key={project} xs={12} sm={6} md={4}>
+            <Card className={classes.card}>
+              <CardMedia
+                className={classes.cardMedia}
+                image="https://source.unsplash.com/random"
+                title="Image title"
+              />
+              <CardContent className={classes.cardContent}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {project.name}
+                </Typography>
+                <Typography>{project.description}</Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="small" color="primary">
+                  APP
+                </Button>
+                <Button size="small" color="primary">
+                  DETAILS
+                </Button>
+              </CardActions>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
   );
 }
