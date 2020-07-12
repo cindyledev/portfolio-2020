@@ -54,9 +54,11 @@ export default function Portfolio() {
                     APP
                   </Button>
                 </Link>
-                <Button size="small" color="primary">
-                  DETAILS
-                </Button>
+                <Link href={project.repo} target="blank" underline="none">
+                  <Button size="small" color="primary">
+                    DETAILS
+                  </Button>
+                </Link>
               </CardActions>
             </Card>
           </Grid>

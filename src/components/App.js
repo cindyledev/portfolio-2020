@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Link as RouterLink } from "react-router-dom";
 import clsx from "clsx";
 import {
   AppBar,
-  Container,
   CssBaseline,
   Drawer,
   Divider,
@@ -28,11 +27,7 @@ import SchoolIcon from "@material-ui/icons/School";
 import StarIcon from "@material-ui/icons/Star";
 
 import Hero from "./Hero";
-import Experience from "./Experience";
-import Education from "./Education";
-import Skills from "./Skills";
 import Portfolio from "./Portfolio";
-import Achievements from "./Achievements";
 import Footer from "./Footer";
 
 const drawerWidth = 240;
