@@ -28,6 +28,7 @@ import StarIcon from "@material-ui/icons/Star";
 
 import Hero from "./Hero";
 import Portfolio from "./Portfolio";
+import AboutPage from "../pages/AboutPage";
 import Footer from "./Footer";
 
 const drawerWidth = 240;
@@ -149,6 +150,7 @@ export default function App() {
         <div className={classes.drawerHeader} />
         <Hero />
         <Portfolio />
+        <AboutPage />
       </main>
       <Drawer
         className={classes.drawer}

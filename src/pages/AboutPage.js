@@ -1,7 +1,16 @@
 import React from "react";
+import { Container, Grid, Typography } from "@material-ui/core";
 
-import { Typography } from "@material-ui/core";
+import Experiences from "../components/Experiences";
+import Education from "../components/Education";
+import Achievements from "../components/Achievements";
 
-export default function About() {
-  return <Typography>About</Typography>;
+export default function AboutPage() {
+  return (
+    <Container>
+      <Experiences />
+      <Education />
+      <Achievements />
+    </Container>
+  );
 }
