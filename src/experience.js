@@ -12,14 +12,14 @@ const experiences = [
     employer: "TJ's Towing",
     description: "A business that offers roadside assistance services.",
     startDate: "October 2019",
-    endDate: "Present",
+    endDate: "May 2020",
   },
   {
     title: "Financial Accountant",
     employer: "Lightning Towing",
     description: "A business that offers roadside assistance",
     startDate: "April 2017",
-    endDate: "Feburary 2020",
+    endDate: "March 2020",
   },
 ];
 

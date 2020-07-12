@@ -4,13 +4,16 @@ const achievements = [
     source: "FreeCodeCamp",
     startDate: "March 2020",
     endDate: "Present",
-    courses: ["Responsive Web Design"],
+    courses: [
+      "Responsive Web Design",
+      "JavaScript Algorithms and Data Structures",
+    ],
   },
   {
     name: "Web Development Bootcamp",
     source: "Udemy Course by Dr. Angela Yu, App Brewery",
     startDate: "April 2020",
-    endDate: "Present",
+    endDate: "June 2020",
     courses: "",
   },
 ];
