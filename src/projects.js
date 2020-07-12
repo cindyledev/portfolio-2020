@@ -10,6 +10,8 @@ const projects = [
       headings: "heading",
       responsibilities: "these are the responsibilities",
     },
+    url: "https://cindyle.ca",
+    repo: "https://github.com/cindyledev/cindyle",
   },
   {
     name: "Telescope",
@@ -22,6 +24,8 @@ const projects = [
       headings: "heading",
       responsibilities: "these are the responsibilities",
     },
+    url: "https://dev.telescope.cdot.systems/",
+    repo: "https://github.com/Seneca-CDOT/telescope",
   },
   {
     name: "TJ's Towing",
@@ -34,6 +38,8 @@ const projects = [
       headings: "heading",
       responsibilities: "these are the responsibilities",
     },
+    url: "https://tjstowing.ca",
+    repo: "https://github.com/cindyledev/tjstowing",
   },
 ];
 
