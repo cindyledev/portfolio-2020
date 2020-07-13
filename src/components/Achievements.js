@@ -1,5 +1,15 @@
 import React from "react";
-import { Container, Grid, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Container,
+  Grid,
+  ListItem,
+  ListItemText,
+  Typography,
+} from "@material-ui/core";
 import {
   Timeline,
   TimelineItem,
@@ -9,10 +19,23 @@ import {
   TimelineOppositeContent,
   TimelineDot,
 } from "@material-ui/lab";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import achievements from "../achievement";
 
+const useStyles = makeStyles((theme) => ({
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+  list: {
+    display: "inline-block",
+  },
+}));
+
 export default function Achievements() {
+  const classes = useStyles();
+
   return (
     <React.Fragment>
       <Container maxWidth="md">
@@ -44,7 +67,27 @@ export default function Achievements() {
                       </Typography>
                       <Typography variant="h6">{exp.source}</Typography>
                       <Typography variant="subtitle1">
-                        Relevant courses: {exp.courses}
+                        <Accordion>
+                          <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                          >
+                            <Typography className={classes.heading}>
+                              Relevant courses:
+                            </Typography>
+                          </AccordionSummary>
+                          <AccordionDetails>
+                            {exp.courses.map((course, i) => (
+                              <ListItem>
+                                <ListItemText
+                                  primary={course}
+                                  className={classes.list}
+                                />
+                              </ListItem>
+                            ))}
+                          </AccordionDetails>
+                        </Accordion>
                       </Typography>
                     </Grid>
                   </TimelineContent>
