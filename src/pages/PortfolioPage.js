@@ -1,6 +1,12 @@
 import React from "react";
-import { Typography } from "@material-ui/core";
+import { Container } from "@material-ui/core";
+
+import PortfolioSheet from "../components/PortfolioSheet";
 
 export default function PortfolioPage() {
-  return <Typography>PortfolioPage</Typography>;
+  return (
+    <Container>
+      <PortfolioSheet />
+    </Container>
+  );
 }
