@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Typography } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 
 import Experiences from "../components/Experiences";
 import Education from "../components/Education";
