@@ -6,8 +6,8 @@ import {
   AccordionDetails,
   Container,
   Grid,
+  List,
   ListItem,
-  ListItemText,
   Typography,
 } from "@material-ui/core";
 import {
@@ -29,7 +29,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.fontWeightRegular,
   },
   list: {
-    display: "inline-block",
+    paddingLeft: "1rem",
+  },
+  item: {
+    listStyle: "disc",
   },
 }));
 
@@ -78,14 +81,15 @@ export default function Achievements() {
                             </Typography>
                           </AccordionSummary>
                           <AccordionDetails>
-                            {exp.courses.map((course, i) => (
-                              <ListItem>
-                                <ListItemText
-                                  primary={course}
-                                  className={classes.list}
-                                />
-                              </ListItem>
-                            ))}
+                            <List className={classes.list}>
+                              {exp.courses.map((course, i) => (
+                                <li className={classes.item}>
+                                  <Typography variant="body2">
+                                    {course}
+                                  </Typography>
+                                </li>
+                              ))}
+                            </List>
                           </AccordionDetails>
                         </Accordion>
                       </Typography>
