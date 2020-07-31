@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
+  cardGrid: {
+    marginBottom: theme.spacing(4),
+  },
   cardMedia: {
     paddingTop: "56.25%", // 16:9
   },

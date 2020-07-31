@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heroButtons: {
     marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4),
   },
 }));
 
@@ -34,8 +35,8 @@ export default function Hero() {
           FULL STACK DEVELOPER
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" paragraph>
-          I'm experienced in wide range of frontend technologies and primarily
-          specialize in JavaScript and React.
+          I love learning new skills and technologies that will help me solve
+          problems as a developer.
         </Typography>
         <div className={classes.heroButtons}>
           <Grid container spacing={2} justify="center">
@@ -77,6 +78,10 @@ export default function Hero() {
             </Grid>
           </Grid>
         </div>
+        <Typography variant="h6" align="center" color="textSecondary" paragraph>
+          Current Focus: Studying for AWS Certified Developer Associate and
+          Professional Scrum Master exams.
+        </Typography>
       </Container>
     </div>
   );
