@@ -32,6 +32,15 @@ export default function Skills() {
         <Icon className="fab fa-react" fontSize="large" color="primary" />
         <Icon className="fab fa-bootstrap" fontSize="large" color="primary" />
         <Icon className="fab fa-sass" fontSize="large" color="primary" />
+        <Typography>Backend</Typography>
+        <Icon className="fab fa-node-js" fontSize="large" color="primary" />
+        <Typography>Deployment</Typography>
+        <Icon className="fab fa-docker" fontSize="large" color="primary" />
+        <Icon className="fab fa-github" fontSize="large" color="primary" />
+        <Typography>Project Management</Typography>
+        <Icon className="fab fa-git" fontSize="large" color="primary" />
+        <Typography>AWS</Typography>
+        <Icon className="fab fa-aws" fontSize="large" color="primary" />
       </Container>
     </React.Fragment>
   );
