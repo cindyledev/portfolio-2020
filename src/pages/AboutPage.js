@@ -5,6 +5,7 @@ import Experiences from "../components/Experiences";
 import Education from "../components/Education";
 import Certificates from "../components/Certificates";
 import Achievements from "../components/Achievements";
+import Skills from "../components/Skills";
 
 export default function AboutPage() {
   return (
@@ -13,6 +14,7 @@ export default function AboutPage() {
       <Education />
       <Certificates />
       <Achievements />
+      <Skills />
     </Container>
   );
 }
