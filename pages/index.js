@@ -1,16 +1,21 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Grid from "@material-ui/core/Grid";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import {
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Container,
+  CssBaseline,
+  IconButton,
+  Grid,
+  Link,
+  Typography,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
-import Link from "@material-ui/core/Link";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import MailIcon from "@material-ui/icons/Mail";
 
 function Copyright() {
   return (
@@ -78,7 +83,7 @@ export default function Index(props) {
               color="textPrimary"
               gutterBottom
             >
-              Album layout
+              CINDY LE
             </Typography>
             <Typography
               variant="h5"
@@ -86,21 +91,45 @@ export default function Index(props) {
               color="textSecondary"
               paragraph
             >
-              Something short and leading about the collection below—its
-              contents, the creator, etc. Make it short and sweet, but not too
-              short so folks don&apos;t simply skip over it entirely.
+              Cloud Support Engineer
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
-                    Main call to action
-                  </Button>
+                  <IconButton
+                    aria-label="https://www.linkedin.com/in/cindyledev/"
+                    color="primary"
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/in/cindyledev/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <LinkedInIcon fontSize="large" />
+                  </IconButton>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
+                  <IconButton
+                    aria-label="https://github.com/cindyledev/"
+                    color="primary"
+                    onClick={() =>
+                      window.open("https://github.com/cindyledev/", "_blank")
+                    }
+                  >
+                    <GitHubIcon fontSize="large" />
+                  </IconButton>
+                </Grid>
+                <Grid item>
+                  <IconButton
+                    aria-label="mailto:cindyledev@gmail.com"
+                    color="primary"
+                    onClick={() =>
+                      window.open("mailto:cindyledev@gmail.com", "_blank")
+                    }
+                  >
+                    <MailIcon fontSize="large" />
+                  </IconButton>
                 </Grid>
               </Grid>
             </div>
