@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
 
-const Index = (props) => (
+const About = () => (
   <Layout>
     <div>
-      <h1>Welcome</h1>
+      <h1>About Cindy</h1>
     </div>
   </Layout>
 );
 
-export default Index;
+export default About;
